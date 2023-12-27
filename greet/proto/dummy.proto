@@ -1,0 +1,14 @@
+syntax ="proto3";
+
+package greet;
+
+option go_package = "github.com/rossado/grpc/greet/proto";
+
+message Dummy {
+    uint32 dummy = 1;
+    
+}
+
+service DummyService {
+}
+    
