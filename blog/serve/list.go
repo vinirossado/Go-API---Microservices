@@ -11,7 +11,7 @@ import (
 	"log"
 )
 
-func (*Server) ListBlogs(_ *emptypb.Empty, stream pb.BlogService_ListBlogServer) error {
+func (s *Server) ListBlogs(_ *emptypb.Empty, stream pb.BlogService_ListBlogServer) error {
 	log.Println("ListBlogs was invoked")
 
 	ctx := context.Background()
@@ -36,6 +36,6 @@ func (*Server) ListBlogs(_ *emptypb.Empty, stream pb.BlogService_ListBlogServer)
 	if err = cur.Err(); err != nil {
 		return status.Errorf(codes.Internal, fmt.Sprintf("Unknown internal error: %v\n", err))
 	}
-	
+
 	return nil
 }
