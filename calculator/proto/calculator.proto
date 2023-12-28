@@ -5,6 +5,9 @@ package calulator;
 
 option go_package = "github.com/rossado/grpc/calculator/proto";
 
+import "sqrt.proto";
+
 service CalculatorService{
-  rpc Sum(SumRequest) returns (SumResponse) ;
+  rpc Sum(SumRequest) returns (SumResponse);
+  rpc Sqrt (SqrtRequest) returns (SqrtResponse);
 }
