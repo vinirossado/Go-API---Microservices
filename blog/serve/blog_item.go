@@ -1,9 +1,8 @@
 package main
 
 import (
-	"go.mongodb.org/mongo-driver/bson/primitive"
-
 	pb "github.com/rossado/grpc/blog/proto"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type BlogItem struct {
